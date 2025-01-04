@@ -15,7 +15,7 @@ import {
 
 export function Nav() {
   const [isScrolled, setIsScrolled] = React.useState(false)
-  const router = useRouter()
+//   const router = useRouter()
 
   React.useEffect(() => {
     const handleScroll = () => {
