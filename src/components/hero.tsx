@@ -1,3 +1,4 @@
+'use client'
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
@@ -24,13 +25,27 @@ export function Hero() {
           building amazing things
         </span>
       </h1>
-      <p className="max-w-[700px] text-muted-foreground md:text-xl">
-        I create beautiful, responsive, and user-friendly websites and applications
-        using modern technologies and best practices.
+      <p className="text-muted-foreground md:text-xl">
+        I’m a Full Stack Developer with expertise in React, Angular, Node.js, and AWS. I specialize in building intuitive web applications, automating deployments, and integrating third-party APIs. With experience leading teams and optimizing workflows, I deliver efficient, user-focused solutions that drive business success.
       </p>
       <div className="flex gap-4">
-        <Button size="lg">View Projects</Button>
-        <Button size="lg" variant="outline">Get in Touch</Button>
+        <Button 
+          size="lg"
+          className="rounded"
+          onClick={() => {
+            document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })
+          }}>
+          View Projects
+        </Button>
+        <Button 
+          size="lg" 
+          className="rounded"
+          variant="outline" 
+          onClick={() => {
+            document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+          }}>
+          Get in Touch
+        </Button>
       </div>
     </section>
   )

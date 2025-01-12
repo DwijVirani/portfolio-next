@@ -35,7 +35,7 @@ export function Projects() {
     <section id="projects" className="py-24">
       <div className="container">
         <div className="flex flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Projects</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Projects</h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
             Explore a collection of my recent work, showcasing my skills in web and mobile development.
           </p>
