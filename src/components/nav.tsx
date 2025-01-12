@@ -59,7 +59,7 @@ export function Nav() {
               className="text-sm font-medium hover:text-primary"
               onClick={(e) => {
                 e.preventDefault()
-                document.querySelector('#')?.scrollIntoView({ behavior: 'smooth' })
+                document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
               }}>
               About
             </Link>

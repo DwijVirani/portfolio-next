@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 export function Hero() {
   return (
-    <section className="container flex flex-col items-center justify-center gap-4 py-24 md:py-32 text-center">
+    <section id="about" className="container flex flex-col items-center justify-center gap-4 py-24 md:py-32 text-center">
       <div className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium">
         🚀 Welcome to my portfolio
         <svg
