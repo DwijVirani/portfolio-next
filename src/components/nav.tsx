@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import Link from "next/link"
-// import { useRouter } from "next/navigation"
 import { Menu } from 'lucide-react'
 
 import { Button } from "@/components/ui/button"
@@ -15,7 +14,6 @@ import {
 
 export function Nav() {
   const [isScrolled, setIsScrolled] = React.useState(false)
-//   const router = useRouter()
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -25,25 +23,28 @@ export function Nav() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const openResume = async () => {
-    try {
-      // Download the file
-      const response = await fetch('https://drive.google.com/file/d/1hfgXbVBhRzRYPbYCn9AAYibggaNTG5dj/view?usp=sharing');
-      const blob = await response.blob();
+  // const openResume = async () => {
+  //   try {
+  //     // Download the file
+  //     const response = await fetch('https://drive.google.com/file/d/1hfgXbVBhRzRYPbYCn9AAYibggaNTG5dj/view?usp=sharing');
+  //     const blob = await response.blob();
       
-      // Create local URL for the file
-      const url = window.URL.createObjectURL(blob);
+  //     // Create local URL for the file
+  //     const url = window.URL.createObjectURL(blob);
       
-      // Open in new window
-      window.open(url, '_blank');
+  //     // Open in new window
+  //     window.open(url, '_blank');
       
-      // Clean up by revoking the URL after a delay
-      setTimeout(() => {
-        window.URL.revokeObjectURL(url);
-      }, 100);
-    } catch (error) {
-      console.error('Error opening resume:', error);
-    }
+  //     // Clean up by revoking the URL after a delay
+  //     setTimeout(() => {
+  //       window.URL.revokeObjectURL(url);
+  //     }, 100);
+  //   } catch (error) {
+  //     console.error('Error opening resume:', error);
+  //   }
+  // }
+  const openResume = () => {
+    window.open('/resume.pdf', '_blank')
   }
 
   return (
@@ -105,9 +106,6 @@ export function Nav() {
           <Button variant="default" className="hidden md:inline-flex rounded" onClick={openResume}>
             Resume
           </Button>
-          {/* <Button onClick={() => router.push('#contact')}>
-            Contact Me
-          </Button> */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
